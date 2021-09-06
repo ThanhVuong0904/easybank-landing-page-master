@@ -1,0 +1,128 @@
+.wrap-banner {
+    height: 800px;
+    max-width: 1440px;
+    overflow: hidden;
+    background-color: #fafafa;
+    margin: 0 auto;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    height: 660px;
+    position: relative;
+    &-heading {
+        font-size: 50px;
+        font-weight: 300;
+        color: black;
+        line-height: 1.4;
+    }
+    &-desc {
+        line-height: 1.4;
+        margin: 45px 0;
+        max-width: 454px;
+    }
+    &-image {
+        background-image: url(/images/bg-intro-desktop.svg);
+        background-repeat: no-repeat;
+        &-mockups {
+            position: absolute;
+        }
+    }
+    //pc
+    @media screen and (min-width: 1024px) {
+        &-content {
+            width: 47.92%;
+            padding-left: 164px;
+        }
+        &-image {
+            
+            background-position: top 72% right 89%;
+            height: 100%;
+            width: 52.08%;
+            &-mockups {
+                transform: translateY(-10%) translateX(15%);
+                z-index: 999999;
+                padding-bottom: 150px;
+            }
+        }
+    }
+    //ipad pro
+    @media screen and (max-width: 1279px) {
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        &-image {
+            width: 100%;
+            flex: 1;
+            background-position: top 70% right 106%;
+            &-mockups {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%,-74%);
+            }
+        }
+        &-content {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+    //ipad
+    @media screen and (max-width: 1023px) {
+        height: 100%;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        &-image {
+            width: 100%;
+            flex: 1;
+            // background-position: top 300% right 55%;
+            &-mockups {
+                top: 50%;
+                right: 50%;
+                transform: translate(50%,-100%);
+            }
+        }
+        &-content {
+            width: 100%;
+            flex: 1;
+        }
+    }
+    @media screen and (max-width: 767px) { 
+        height: 100%;
+        &-image {
+            width: 100%;
+            flex: 1;
+            background-image: url(/images/bg-intro-desktop.svg);
+            background-position: top 90% right 50%;
+            background-repeat: no-repeat;
+        }
+        &-content {
+            width: 100%;
+            flex: 1;
+            padding: 0 10px 10px;
+        }
+        &-heading {
+            font-size: 40px;
+        }
+    }
+}
+@media screen and (max-width: 1279px) {
+    .wrap-banner { 
+        height: 1200px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .wrap-banner { 
+        height: 1200px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .wrap-banner { 
+        height: 1000px;
+    }
+}

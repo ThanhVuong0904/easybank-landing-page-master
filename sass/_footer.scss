@@ -1,0 +1,66 @@
+.footer {
+    padding: 50px 0;
+    background-color: $Dark-Blue;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-column:not(:last-child):not(:first-child) {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex: 1;
+    }
+    &-column:first-child {
+        margin-right: 115px;
+    }
+    &-column:last-child {
+        text-align: right;
+        flex: 2;
+    }
+    &-social {
+        display: flex;
+        &-link:hover {
+            svg {
+                path {
+                    fill: $Lime-Green;
+                }
+            }
+        }
+        &-link:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+    &-logo {
+        margin-bottom: 55px;
+    }
+    &-link {
+        color: $LightGrayishBlue;
+    }
+    &-link:hover {
+        color: $Lime-Green;
+    }
+    &-copyright {
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    @media screen and (max-width: 1023px) {
+        &-list {
+            flex-direction: column;
+            align-items: center;
+        }
+        &-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-column:first-child {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+        &-link {
+            padding-bottom: 30px;
+        }
+    }
+    
+}
